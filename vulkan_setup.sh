@@ -19,3 +19,6 @@ source ~/.zshrc
 
 # Check that Vulkan is set up
 vulkaninfo
+
+# This guide is helpful as well: 
+# https://vulkan.lunarg.com/doc/view/1.3.236.0/mac/getting_started.html
