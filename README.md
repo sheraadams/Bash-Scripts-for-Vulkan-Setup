@@ -1,4 +1,4 @@
-## Bash Scripts for Vulkan Setup
+## Bash Scripts for Vulkan Setup on Mac OS
 
 This shell script is for setting up Vulkan and Molten VK on Mac OS. 
 
