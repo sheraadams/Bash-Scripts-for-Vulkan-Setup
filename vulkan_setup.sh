@@ -1,4 +1,24 @@
-Bash Scripts for Vulkan Setup
+Bash Scripts for Vulkan Setup on Mac OS
+
+# install Molten VK to translate the Vulkan calls to Metal
+brew install molten-vk
+
+# install Vulkan tools
+brew install vulkan-tools
+
+# Now, proceed to install Vulkan from: https://vulkan.lunarg.com
+
+# Find the json files to link to the zshrc profile for setting up the environment
+# Locate the json files and folders if needed with 
+find ~/VulkanSDK -name "*.json"
+
+# Note: On Apple Silicon, I found the json files in the share folder and I copied them over to the etc folder I created. See below:
+
+#~/VulkanSDK/<version>/macOS/share/vulkan/explicit_layer.d
+#~/VulkanSDK/<version>/macOS/share/vulkan/icd.d
+
+#~/VulkanSDK/<version>/macOS/etc/vulkan/explicit_layer.d
+#~/VulkanSDK/<version>/macOS/etc/vulkan/icd.d
 
 # Open the zshrc file
 nano ~/.zshrc
@@ -16,10 +36,6 @@ export VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d
 
 # Save the zshrc file
 source ~/.zshrc
-
-# Note: On Apple Silicon, I found the json files in:
-#~/VulkanSDK/<version>/macOS/etc/vulkan/explicit_layer.d
-#~/VulkanSDK/<version>/macOS/etc/vulkan/icd.d
 
 # Check that Vulkan is set up
 vulkaninfo
